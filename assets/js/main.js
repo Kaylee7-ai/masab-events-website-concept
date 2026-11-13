@@ -34,12 +34,6 @@
   }
 
   const form = document.querySelector("#enquiry-form");
-  const eventDate = document.querySelector('input[name="date"]');
-  if (eventDate) {
-    const today = new Date();
-    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
-    eventDate.min = localToday;
-  }
 
   if (form) form.addEventListener("submit", (event) => {
     event.preventDefault();
