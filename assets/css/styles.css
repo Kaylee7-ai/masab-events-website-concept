@@ -108,3 +108,78 @@ html{background:#17131b}body{background:radial-gradient(ellipse at 12% 8%,rgba(1
 .planning-img{background-image:url("https://images.unsplash.com/photo-1763553113332-800519753e40?auto=format&fit=crop&w=1200&q=88")}
 .design-img{background-image:url("https://images.unsplash.com/photo-1773005695245-348091f9be27?auto=format&fit=crop&w=1200&q=88")}
 .coordination-img{background-image:url("https://images.unsplash.com/photo-1769812343323-5e06f29e0070?auto=format&fit=crop&w=1200&q=88")}
+
+
+/* MASAB EDITORIAL LUXURY REDESIGN — warm ivory, forest green and champagne */
+:root{--ink:#23352d;--muted:#66746b;--paper:#f7f4ec;--gold:#b99561;--dark:#17352b;--line:rgba(35,53,45,.16);--serif:"Cormorant Garamond","Playfair Display",Georgia,serif;--sans:"Manrope",Arial,sans-serif}
+html{background:#f7f4ec}
+body{background:#f7f4ec;color:var(--ink)}
+.concept-note{background:#18372d;color:#e8d8bb;border-bottom:1px solid #c6a775;letter-spacing:.15em}
+.header{background:rgba(249,247,240,.97);color:#23352d;border-bottom:1px solid rgba(35,53,45,.13);backdrop-filter:blur(14px)}
+.monogram{color:#23352d;text-shadow:none}.monogram span{color:#b99561;text-shadow:none}
+.brand b{color:#23352d}.brand small{color:#758077}
+.nav a{color:#56665c}.nav a.active,.nav a:hover{color:#a47e49;text-shadow:none}
+.nav .nav-button{background:#1d3b30;color:#fff;box-shadow:none}
+.menu-toggle{border-color:rgba(35,53,45,.2)}.menu-toggle i{background:#23352d}
+.eyebrow{color:#967347;letter-spacing:.22em}.eyebrow.pale{color:#e8d6b7}
+.hero,.page-hero{background-color:#1b3028}
+.hero-bg{filter:saturate(.9) brightness(.76)}
+.hero-overlay{background:linear-gradient(90deg,rgba(14,34,27,.82),rgba(14,34,27,.12)),linear-gradient(0deg,rgba(14,34,27,.32),transparent 55%)}
+.hero h1,.page-hero h1{font-family:var(--serif);font-weight:600;text-shadow:0 3px 28px rgba(0,0,0,.18)}
+.hero h1 em,.page-hero h1 em{color:#e4c99c;text-shadow:none}
+.hero-lede,.page-hero-content>p:last-child{color:#f1ede4}
+.button{border-radius:2px;letter-spacing:.13em}
+.gold{background:#c4a16c;color:#1d2e26;box-shadow:none}.gold:hover{background:#d5b783;box-shadow:none}
+.dark{background:#1d3b30;color:#fff;border:1px solid #1d3b30}
+.under-link{border-color:#b99561}
+.intro-grid,.wedding-grid,.wedding-intro,.gallery-intro-grid{color:#23352d}
+.intro h2,.wedding-text h2,.split-copy h2,.service-intro h2,.wedding-intro h2,.contact-grid h2,.section-title,.gallery-intro-grid h2,.gallery-showcase-heading h2,.gallery-design-notes h2{font-family:var(--serif);font-weight:600;color:#23352d}
+.intro h2 em,.wedding-text h2 em,.split-copy h2 em,.service-intro h2 em,.wedding-intro h2 em,.contact-grid h2 em,.section-title em,.gallery-intro-grid h2 em,.gallery-showcase-heading h2 em{color:#a98553}
+.serif-lede{font-family:var(--serif);font-size:27px;color:#35463c}
+.intro-copy>p:not(.serif-lede),.split-copy>p:not(.eyebrow),.wedding-text>p:not(.eyebrow),.contact-grid>div>p:not(.eyebrow),.gallery-intro-grid>div:last-child p:not(.serif-lede){color:#66746b}
+.pillars{border-color:var(--line)}.pillars>div+div{border-color:var(--line)}.pillars b{color:#263b31}.pillars small{color:#718076}
+.split{background:#eee9de}.split-copy{color:#23352d}.split-copy h2 em{color:#a98553}
+.split.reverse{background:#1c392f;color:#fff}.split.reverse .split-copy h2{color:#fff}.split.reverse .split-copy h2 em{color:#d8bd91}
+.dark-panel>p:not(.eyebrow){color:#e0e6df}
+.wedding-text li{color:#526258;border-color:var(--line)}.wedding-text li:before{color:#b99561}
+.inspiration,.gallery-showcase,.contact-section{background:#eee9df}
+.section-heading h2,.section-heading h2 em{font-family:var(--serif);color:#23352d}.section-heading h2 em,.closing h2 em{color:#a98553}
+.image-tile{background:#e3ddd1;border:1px solid rgba(35,53,45,.13)}
+.disclaimer{color:#777d72}
+.coverage{background:#18372d;border-block:1px solid #c4a16c}.coverage h2{color:#fff}.coverage h2 em{color:#e0c49a}.coverage-row>p{color:#d6ded7}
+.closing{background:#e9eee7;border-block:1px solid rgba(35,53,45,.12)}.closing h2{font-family:var(--serif);color:#23352d}
+.footer{background:#142d24;border-top:1px solid #c4a16c}.footer-brand small{color:#d3c9b8}.footer-main>p,.footer-links a{color:#d4ddd5}.footer-bottom{border-color:#ffffff2b;color:#b4c0b5}
+.page-hero:before{filter:saturate(.88) brightness(.74)}
+.page-hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(14,34,27,.52),rgba(14,34,27,.04))}
+.page-hero-content{z-index:1}
+.service-cards article,.package-card{background:#fbf9f4;border:1px solid rgba(35,53,45,.13);box-shadow:0 14px 35px rgba(43,51,42,.06)}
+.service-cards article:hover{border-color:rgba(185,149,97,.5);box-shadow:0 18px 40px rgba(43,51,42,.1)}
+.service-cards h3,.steps h3,.wedding-points h3,.package-card h3{font-family:var(--serif);color:#263b31}
+.service-cards p,.service-cards li,.package-card ul,.package-card p{color:#68766c}
+.service-cards article>small,.package-card>span{color:#98764b}
+.process,.gallery-design-notes{background:#1b392e;color:#fff;border-block:1px solid rgba(185,149,97,.3)}
+.process h2,.wedding-story-copy h2,.gallery-design-notes h2{font-family:var(--serif);color:#fff}
+.process h2 em,.wedding-story-copy h2 em,.gallery-design-notes h2 em{color:#d8bd91}
+.steps article,.wedding-points article,.gallery-design-points>div{border-color:rgba(255,255,255,.25)}
+.steps p,.wedding-points p,.gallery-design-points p,.wedding-intro p:not(.serif-lede){color:#d0d9d1}
+.wedding-story{background:#1b392e}
+.wedding-story-copy p:last-child{color:#d0d9d1}
+.gallery-showcase-heading>p{color:#657369}
+.premium-gallery figure{background:#fbf9f4;border:1px solid rgba(35,53,45,.13)}
+.premium-gallery figcaption b{font-family:var(--serif);font-size:25px;color:#263b31}
+.premium-gallery figcaption small{color:#69766d}.premium-gallery figcaption span{color:#98764b}
+.gallery-design-points b{font-family:var(--serif);font-size:25px}
+.contact-grid>div>p:not(.eyebrow){color:#647369}
+.contact-note{border-color:var(--line)}.contact-note b{font-family:var(--serif);font-size:24px;color:#263b31}.contact-note span{color:#657369}
+.form-card{background:#fffdf8;color:#23352d;border:1px solid rgba(185,149,97,.32);box-shadow:0 18px 48px rgba(43,51,42,.08)}
+.form-card input,.form-card select,.form-card textarea{background:#fff;color:#23352d;border-color:#d8d9ce}
+.form-label,.form-section-title{color:#8d6b43}.form-card form>label,.form-card form>.two-fields label{color:#435247}
+.form-help,.form-status{color:#6f7b71}
+.demo-warning{background:#f2ecdf;border-left-color:#a98553;color:#514536}
+.form-privacy-note,.enquiry-preview{background:#f1eee6;color:#4e5e53}
+.service-checks label{color:#4d5c52}
+.package-card-feature{background:#f2f0e8}
+.package-note{color:#6b786d}
+.contact-note a{color:#8d6b43}
+@media(max-width:680px){.nav{background:#f7f4ec;box-shadow:0 15px 30px #1b30281a}.nav a{border-color:rgba(35,53,45,.12);color:#435247}.nav .nav-button{background:#1d3b30;color:#fff}.menu-toggle{background:#f7f4ec}.hero h1,.page-hero h1{font-size:clamp(48px,13vw,60px)}.serif-lede{font-size:24px}.service-cards article{padding:16px}}
+@media(prefers-reduced-motion:no-preference){.hero:after{content:"";position:absolute;inset:auto 8% 0;height:1px;background:linear-gradient(90deg,transparent,#c4a16c,transparent);box-shadow:0 0 12px #c4a16c33}}
