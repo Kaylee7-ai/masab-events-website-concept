@@ -102,3 +102,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
  .contact-grid{grid-template-columns:1fr}.form-card{padding:22px 17px}.two-fields,.service-checks{grid-template-columns:1fr}.gallery-lightbox{padding:18px}.gallery-lightbox img{width:94vw;height:76vh}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+/* Final photography treatment and viewport polish */
+.hero{min-height:min(900px,calc(100svh - 35px))}
+.gallery-open img,.package-image-frame img,.wedding-point-image img,.image-tile img{filter:saturate(.9) sepia(.035)}
+.gallery-open:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}
+.form-card label:focus-within{color:#8c6a42}
+@media(max-width:680px){.hero{min-height:680px}}
