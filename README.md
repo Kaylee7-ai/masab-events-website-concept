@@ -6,7 +6,9 @@ This is an independent website concept created as a proposal/demo for a potentia
 - Responsive multi-page website: Home, Services, Weddings, Inspiration and Enquiries.
 - Presentation of the business areas supplied for this concept: wedding planning and coordination, engagement/church/reception décor, bridal services, catering, beverages, cake, photography and videography, stationery, souvenirs, MC/DJ and other wedding needs. Contact and location details are based on promotional material supplied for this concept.
 - Accra, Kumasi and nationwide service-area messaging.
-- Mobile navigation and an enquiry-form interaction preview.
+- Royal Noir dark-luxury visual system: near-black and deep emerald sections, antique-gold gradients, warm ivory typography, glass-style cards, editorial image frames and cinematic hero treatments.
+- Refined responsive mobile navigation, sticky Call / Enquire action bar, scrolling marquee and accessible enquiry-form interaction preview.
+- Scroll reveals, gentle hero motion, hover transitions and reduced-motion support.
 - Search-friendly page titles, descriptions and semantic HTML.
 
 ## Important before launch
@@ -26,7 +28,7 @@ This is a plain HTML, CSS and JavaScript site and can be hosted on GitHub Pages.
 
 ## Technology
 - HTML5, CSS3 and vanilla JavaScript
-- Google Fonts (Cormorant Garamond and Manrope)
+- Google Fonts (Cormorant Garamond and Jost)
 - Illustrative remote Unsplash photography (replace before official launch)
 
 
