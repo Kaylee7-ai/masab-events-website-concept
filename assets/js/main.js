@@ -34,6 +34,13 @@
   }
 
   const form = document.querySelector("#enquiry-form");
+  const eventDate = document.querySelector('input[name="date"]');
+  if (eventDate) {
+    const today = new Date();
+    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    eventDate.min = localToday;
+  }
+
   if (form) form.addEventListener("submit", (event) => {
     event.preventDefault();
     const status = document.querySelector("#form-status");
@@ -79,9 +86,24 @@
     const preview = document.createElement("pre");
     preview.className = "enquiry-preview";
     preview.setAttribute("tabindex", "0");
+    preview.setAttribute("aria-label", "Your event brief preview");
     preview.textContent = lines.join("\n");
+    const copyButton = document.createElement("button");
+    copyButton.type = "button";
+    copyButton.className = "button dark copy-brief-button";
+    copyButton.textContent = "Copy event brief";
+    copyButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(lines.join("\n"));
+        copyButton.textContent = "Copied";
+      } catch {
+        preview.focus();
+        status.textContent = "Select and copy the event brief above. Nothing has been sent or stored.";
+      }
+    });
     form.appendChild(preview);
-    status.textContent = "Your event brief preview is ready. Nothing has been sent or stored. The business must approve its privacy notice and connect its official contact destination before this form can accept real enquiries.";
+    form.appendChild(copyButton);
+    status.textContent = "Your event brief preview is ready. You can copy it for demonstration purposes. Nothing has been sent or stored.";
     status.classList.add("is-active");
     preview.scrollIntoView({ behavior: "smooth", block: "nearest" });
   });
