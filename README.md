@@ -26,7 +26,7 @@ This is a plain HTML, CSS and JavaScript site and can be hosted on GitHub Pages.
 
 ## Technology
 - HTML5, CSS3 and vanilla JavaScript
-- Google Fonts (DM Sans and Playfair Display)
+- Google Fonts (Cormorant Garamond and Manrope)
 - Illustrative remote Unsplash photography (replace before official launch)
 
 
