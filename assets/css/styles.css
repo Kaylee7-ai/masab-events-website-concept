@@ -41,3 +41,46 @@
 .gallery-design-points p{font-size:11px;line-height:1.8;color:#c3bbb0;margin:0}
 @media(max-width:800px){.gallery-intro-grid{gap:35px}.premium-gallery{grid-template-columns:1fr 1fr}.premium-gallery figure.gallery-feature{grid-column:span 2;grid-row:auto}.premium-gallery figure.gallery-feature img{height:350px;min-height:0}.gallery-showcase-heading{align-items:flex-start;flex-direction:column;gap:16px}}
 @media(max-width:680px){.gallery-intro-grid{grid-template-columns:1fr;gap:22px}.gallery-showcase-heading h2,.gallery-intro-grid h2,.gallery-design-notes h2{font-size:43px}.premium-gallery{grid-template-columns:1fr;gap:15px}.premium-gallery figure.gallery-feature{grid-column:auto}.premium-gallery figure.gallery-feature img{height:270px}.premium-gallery figure img{height:235px}.gallery-design-points{grid-template-columns:1fr;gap:23px;margin-top:35px}}
+
+
+/* MASAB premium night-luxe visual system */
+:root{--ink:#f5f0e9;--muted:#b7abb8;--paper:#17131b;--gold:#d8b77d;--dark:#100d14;--line:rgba(236,220,198,.16);--serif:"Cormorant Garamond","Playfair Display",Georgia,serif;--sans:"Manrope",Arial,sans-serif}
+html{background:#17131b}body{background:radial-gradient(ellipse at 12% 8%,rgba(155,92,255,.18),transparent 34rem),radial-gradient(ellipse at 88% 28%,rgba(220,174,105,.13),transparent 30rem),#17131b;color:var(--ink)}
+.concept-note{background:#0d0a11;color:#ddc89f;border-bottom:1px solid rgba(205,169,255,.17);letter-spacing:.18em}
+.header{background:rgba(19,15,23,.95);color:#f5f0e9;border-bottom:1px solid rgba(220,190,145,.18);backdrop-filter:blur(16px)}
+.monogram{font-family:var(--serif);font-size:43px;color:#f5e6cf;text-shadow:0 0 18px rgba(212,174,255,.28)}.monogram span{color:#d9b77d;text-shadow:0 0 15px rgba(225,184,115,.55)}
+.brand b{color:#f5f0e9;letter-spacing:.3em}.brand small{color:#b9aeb8}
+.nav a{color:#c8bdc7}.nav a.active,.nav a:hover{color:#e5c58d;text-shadow:0 0 14px rgba(213,170,255,.4)}.nav .nav-button{background:linear-gradient(110deg,#d6b77f,#b58a58);color:#1a1319;box-shadow:0 0 22px rgba(210,172,112,.16)}
+.menu-toggle{border-color:rgba(236,220,198,.25)}.menu-toggle i{background:#f5f0e9}
+.eyebrow{color:#d8b77d;letter-spacing:.25em}.eyebrow.pale{color:#e8d1a8}
+.hero,.page-hero{background-color:#17121c}.hero-bg{filter:saturate(.82) brightness(.78)}.hero-overlay{background:linear-gradient(90deg,rgba(12,9,16,.88),rgba(15,10,20,.24)),linear-gradient(0deg,rgba(13,9,17,.48),transparent 52%),radial-gradient(ellipse at 78% 22%,rgba(158,96,255,.2),transparent 48%)}
+.hero h1,.page-hero h1{font-family:var(--serif);font-weight:600;letter-spacing:-.025em;text-shadow:0 4px 30px rgba(0,0,0,.24)}.hero h1 em,.page-hero h1 em{color:#e5c58e;text-shadow:0 0 24px rgba(220,177,119,.22)}
+.hero-lede,.page-hero-content>p:last-child{color:#e1d7e0}
+.button{border-radius:2px;letter-spacing:.15em}.gold{background:linear-gradient(115deg,#e2c58f,#bd965f);color:#171019;box-shadow:0 0 24px rgba(219,178,113,.15)}.gold:hover{background:linear-gradient(115deg,#f0d9a9,#d2aa70);box-shadow:0 0 30px rgba(219,178,113,.3)}.dark{background:#302337;color:#fff;border:1px solid rgba(224,190,255,.28)}
+.under-link{border-color:#d5b47d}.intro-grid,.wedding-grid,.wedding-intro,.gallery-intro-grid{color:#f4edf2}
+.intro h2,.wedding-text h2,.split-copy h2,.service-intro h2,.wedding-intro h2,.contact-grid h2,.section-title,.gallery-intro-grid h2,.gallery-showcase-heading h2,.gallery-design-notes h2{font-family:var(--serif);font-weight:600}
+.intro h2 em,.wedding-text h2 em,.split-copy h2 em,.service-intro h2 em,.wedding-intro h2 em,.contact-grid h2 em,.section-title em,.gallery-intro-grid h2 em,.gallery-showcase-heading h2 em{color:#d9b77d}
+.serif-lede{font-family:var(--serif);font-size:27px;color:#f0e4ec}
+.intro-copy>p:not(.serif-lede),.split-copy>p:not(.eyebrow),.wedding-text>p:not(.eyebrow),.contact-grid>div>p:not(.eyebrow),.gallery-intro-grid>div:last-child p:not(.serif-lede){color:#bdb1bc}
+.pillars{border-color:var(--line)}.pillars>div+div{border-color:var(--line)}.pillars b{color:#f3e9ef}.pillars small{color:#b7abb6}
+.split{background:#211a27}.split-copy{color:#f6eef3}.split-copy h2 em{color:#dfbd83}.split.reverse{background:#100d14}.dark-panel>p:not(.eyebrow){color:#c8bdc8}
+.wedding-text li{color:#d0c4ce;border-color:var(--line)}.wedding-text li:before{color:#dfbd83}
+.inspiration,.gallery-showcase,.contact-section{background:linear-gradient(140deg,#211a27,#18131d 72%)}
+.section-heading h2,.section-heading h2 em{font-family:var(--serif);color:#f4edf2}.section-heading h2 em,.closing h2 em{color:#dfbd83}
+.image-tile{background:#302538;border:1px solid rgba(223,189,131,.18)}.disclaimer{color:#b6aab5}
+.coverage{background:#100d14;border-block:1px solid rgba(210,174,120,.17)}.coverage h2 em{color:#dfbd83}
+.closing{background:radial-gradient(ellipse at 50% 0%,rgba(150,91,220,.2),transparent 55%),linear-gradient(130deg,#2b2030,#17121b);border-block:1px solid rgba(214,181,132,.16)}.closing h2{font-family:var(--serif);color:#f6edf3}
+.footer{background:#0d0a11;border-top:1px solid rgba(216,183,125,.2)}.footer-brand small{color:#b5a8b3}.footer-main>p,.footer-links a{color:#c3b7c2}.footer-bottom{border-color:#ffffff20;color:#958894}
+.page-hero:before{filter:saturate(.78) brightness(.68)}.page-hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 78% 18%,rgba(157,94,255,.2),transparent 42%),linear-gradient(0deg,rgba(13,9,17,.28),transparent 65%)}.page-hero-content{z-index:1}
+.service-cards article{padding:20px;background:rgba(255,255,255,.025);border:1px solid rgba(224,190,255,.13);transition:transform .25s,border-color .25s,box-shadow .25s}.service-cards article:hover{transform:translateY(-4px);border-color:rgba(220,184,130,.42);box-shadow:0 16px 42px rgba(0,0,0,.2),0 0 24px rgba(151,92,220,.1)}
+.service-cards h3,.steps h3,.wedding-points h3{font-family:var(--serif);font-size:29px;color:#f4eaf1}.service-cards p,.service-cards li{color:#bdb1bc}.service-cards article>small{color:#dfbd83}
+.process,.gallery-design-notes{background:radial-gradient(ellipse at 90% 0%,rgba(151,91,222,.15),transparent 40%),#100d14;border-block:1px solid rgba(218,181,127,.12)}.process h2,.wedding-story-copy h2,.gallery-design-notes h2{font-family:var(--serif)}.process h2 em,.wedding-story-copy h2 em,.gallery-design-notes h2 em{color:#dfbd83}
+.steps article,.wedding-points article,.gallery-design-points>div{border-color:rgba(238,218,198,.22)}.steps p,.wedding-points p,.gallery-design-points p,.wedding-intro p:not(.serif-lede){color:#bdb1bc}
+.wedding-story{background:#211a27}.wedding-story-copy p:last-child{color:#c8bdc8}.gallery-showcase-heading>p{color:#bdb1bc}
+.premium-gallery figure{background:#211a27;border:1px solid rgba(222,187,132,.15)}.premium-gallery figcaption b{font-family:var(--serif);font-size:25px;color:#f4eaf1}.premium-gallery figcaption small{color:#b8acb7}.premium-gallery figcaption span{color:#dfbd83}.gallery-design-points b{font-family:var(--serif);font-size:25px}
+.contact-grid>div>p:not(.eyebrow){color:#c2b6c1}.contact-note{border-color:var(--line)}.contact-note b{font-family:var(--serif);font-size:24px;color:#f3e8ef}.contact-note span{color:#bdb1bc}
+.form-card{background:#f7f1e9;color:#211a20;border:1px solid rgba(223,189,131,.45);box-shadow:0 22px 70px rgba(0,0,0,.32),0 0 32px rgba(155,92,255,.1)}
+.form-card input,.form-card select,.form-card textarea{background:#fffdfa;color:#211a20;border-color:#d7cbbb}.form-label,.form-section-title{color:#8d6b43}.form-card form>label,.form-card form>.two-fields label{color:#453b40}.form-help,.form-status{color:#766b70}
+.demo-warning{background:#f1e8da;border-left-color:#9c7449;color:#514536}.form-privacy-note,.enquiry-preview{background:#eee5d9;color:#514536}.service-checks label{color:#514536}
+@media(max-width:680px){.nav{background:#17121b;box-shadow:0 15px 30px #0008}.nav a{border-color:rgba(236,220,198,.13);color:#e4d9e3}.nav .nav-button{background:linear-gradient(110deg,#d6b77f,#b58a58);color:#1a1319}.menu-toggle{background:#211a27}.hero h1,.page-hero h1{font-size:clamp(48px,13vw,60px)}.serif-lede{font-size:24px}.service-cards article{padding:16px}}
+@media(prefers-reduced-motion:no-preference){.hero:after{content:"";position:absolute;inset:auto 8% 0;height:1px;background:linear-gradient(90deg,transparent,#d9b77d88,#b98bff88,transparent);box-shadow:0 0 18px #b98bff55}}
