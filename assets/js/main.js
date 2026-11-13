@@ -6,15 +6,33 @@
   const toggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav");
   if (toggle && nav) {
+    const closeMenu = () => {
+      closeMenu();
+      toggle.setAttribute("aria-label", "Open navigation");
+    };
     toggle.addEventListener("click", () => {
       const open = nav.classList.toggle("open");
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
     });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("open")) {
+        closeMenu();
+        toggle.focus();
+      }
+    });
     nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
       nav.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
     }));
+  }
+
+  // Prevent visitors from selecting an event date in the past.
+  const eventDate = document.querySelector('input[name="date"]');
+  if (eventDate) {
+    const now = new Date();
+    const localDate = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    eventDate.min = localDate;
   }
 
   const form = document.querySelector("#enquiry-form");
