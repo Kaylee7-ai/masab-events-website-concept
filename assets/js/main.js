@@ -7,7 +7,8 @@
   const nav = document.querySelector(".nav");
   if (toggle && nav) {
     const closeMenu = () => {
-      closeMenu();
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
       toggle.setAttribute("aria-label", "Open navigation");
     };
     toggle.addEventListener("click", () => {
@@ -21,10 +22,7 @@
         toggle.focus();
       }
     });
-    nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-      nav.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
-    }));
+    nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
   }
 
   // Prevent visitors from selecting an event date in the past.
