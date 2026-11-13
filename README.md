@@ -4,7 +4,7 @@ This is an independent website concept created as a proposal/demo for a potentia
 
 ## Concept scope
 - Responsive multi-page website: Home, Services, Weddings, Inspiration and Enquiries.
-- Presentation of the business areas supplied for this concept: full-scale event planning and coordination, traditional and modern weddings, and mobile bar setup.
+- Presentation of the business areas supplied for this concept: wedding planning and coordination, engagement/church/reception décor, bridal services, catering, beverages, cake, photography and videography, stationery, souvenirs, MC/DJ and other wedding needs. Contact and location details are based on promotional material supplied for this concept.
 - Accra, Kumasi and nationwide service-area messaging.
 - Mobile navigation and an enquiry-form interaction preview.
 - Search-friendly page titles, descriptions and semantic HTML.
