@@ -22,30 +22,51 @@
     event.preventDefault();
     const status = document.querySelector("#form-status");
     if (!status) return;
+    if (!form.reportValidity()) return;
     const data = new FormData(form);
-    const required = ["name", "email", "eventType"];
-    if (required.some((key) => !String(data.get(key) || "").trim())) {
-      status.textContent = "Please complete your name, email address and event type.";
-      status.classList.add("is-active");
-      return;
-    }
+    const selectedServices = data.getAll("services");
+    const value = (key) => String(data.get(key) || "").trim() || "Not specified";
     const lines = [
-      "MASAB EVENTS — ENQUIRY PREVIEW",
-      "Name: " + data.get("name"),
-      "Email: " + data.get("email"),
-      "Event: " + data.get("eventType"),
-      "Date: " + (data.get("date") || "Not specified"),
-      "Location: " + (data.get("location") || "Not specified"),
-      "Service: " + (data.get("service") || "Not specified"),
-      "Details: " + (data.get("details") || "Not provided")
+      "MASAB EVENTS — EVENT ENQUIRY PREVIEW",
+      "",
+      "CONTACT",
+      "Name: " + value("name"),
+      "Email: " + value("email"),
+      "Phone: " + value("phone"),
+      "Preferred contact: " + value("contactPreference"),
+      "",
+      "EVENT",
+      "Type: " + value("eventType"),
+      "Occasion: " + value("eventName"),
+      "Date: " + value("date"),
+      "Date flexible: " + value("dateFlexible"),
+      "Start time: " + value("startTime"),
+      "Duration: " + value("duration"),
+      "Location: " + value("location"),
+      "Venue status: " + value("venueStatus"),
+      "Venue: " + value("venue"),
+      "",
+      "GUESTS & VISION",
+      "Estimated guests: " + value("guestCount"),
+      "Budget: " + value("budget"),
+      "Style: " + value("style"),
+      "Theme / colours: " + value("theme"),
+      "",
+      "SERVICES REQUESTED",
+      selectedServices.length ? selectedServices.join(", ") : "Not specified",
+      "",
+      "Wedding / cultural details: " + value("weddingDetails"),
+      "Additional notes: " + value("details")
     ];
     const old = form.querySelector(".enquiry-preview");
     if (old) old.remove();
     const preview = document.createElement("pre");
     preview.className = "enquiry-preview";
+    preview.setAttribute("tabindex", "0");
     preview.textContent = lines.join("\n");
     form.appendChild(preview);
-    status.textContent = "Preview created. This demonstration does not send or store your information. An owner-approved contact destination and privacy notice must be configured before launch.";
+    status.textContent = "Your event brief preview is ready. Nothing has been sent or stored. The business must approve its privacy notice and connect its official contact destination before this form can accept real enquiries.";
     status.classList.add("is-active");
+    preview.scrollIntoView({ behavior: "smooth", block: "nearest" });
   });
 })();
