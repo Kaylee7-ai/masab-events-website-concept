@@ -33,18 +33,18 @@ let event = "Wedding";
 let picked = [];
 
 /* ---------- Marquee + services ---------- */
-const names = SERVICES.map(s => \`<span>\${s.n}</span>\`).join("");
+const names = SERVICES.map(s => `<span>${s.n}</span>`).join("");
 $("#marquee").innerHTML = names + names;
-$("#servicesList").innerHTML = SERVICES.map((s, i) => \`
+$("#servicesList").innerHTML = SERVICES.map((s, i) => `
   <article class="svc reveal">
-    <span class="num">\${String(i + 1).padStart(2, "0")}</span>
-    <div><h3>\${s.n}</h3><p>\${s.d}</p></div>
+    <span class="num">${String(i + 1).padStart(2, "0")}</span>
+    <div><h3>${s.n}</h3><p>${s.d}</p></div>
     <span class="arrow" aria-hidden="true">↗</span>
-  </article>\`).join("");
+  </article>`).join("");
 
 /* ---------- Planner ---------- */
-$("#eventPills").innerHTML = EVENTS.map(e => \`<button type="button" class="pill" data-event="\${e}" aria-pressed="false">\${e}</button>\`).join("");
-$("#serviceChips").innerHTML = SERVICES.map(s => \`<button type="button" class="pill" data-svc="\${s.n}" aria-pressed="false">\${s.n}</button>\`).join("");
+$("#eventPills").innerHTML = EVENTS.map(e => `<button type="button" class="pill" data-event="${e}" aria-pressed="false">${e}</button>`).join("");
+$("#serviceChips").innerHTML = SERVICES.map(s => `<button type="button" class="pill" data-svc="${s.n}" aria-pressed="false">${s.n}</button>`).join("");
 $("#fDate").min = new Date().toISOString().slice(0, 10);
 
 $("#eventPills").addEventListener("click", e => {
@@ -73,17 +73,17 @@ function rows() {
 }
 function message() {
   const name = $("#fName").value.trim(), notes = $("#fNotes").value.trim(), r = rows();
-  return \`Hello \${CONFIG.business}! I’d like to enquire about planning an event.\\n\\n\` +
-    \`• Event: \${r[0][1]}\\n• Date: \${r[1][1]}\\n• Guests: \${r[2][1]}\\n• Venue: \${r[3][1]}\\n\` +
-    \`• Services needed: \${picked.length ? picked.join(", ") : "Not sure yet, please advise"}\` +
-    (notes ? \`\\n• Notes: \${notes}\` : "") + (name ? \`\\n\\nName: \${name}\` : "") +
-    \`\\n\\nPlease let me know availability and pricing. Thank you!\`;
+  return `Hello ${CONFIG.business}! I’d like to enquire about planning an event.\n\n` +
+    `• Event: ${r[0][1]}\n• Date: ${r[1][1]}\n• Guests: ${r[2][1]}\n• Venue: ${r[3][1]}\n` +
+    `• Services needed: ${picked.length ? picked.join(", ") : "Not sure yet, please advise"}` +
+    (notes ? `\n• Notes: ${notes}` : "") + (name ? `\n\nName: ${name}` : "") +
+    `\n\nPlease let me know availability and pricing. Thank you!`;
 }
 function update() {
   $$("[data-event]").forEach(b => b.setAttribute("aria-pressed", b.dataset.event === event));
   $$("[data-svc]").forEach(b => b.setAttribute("aria-pressed", picked.includes(b.dataset.svc)));
-  $("#summary").innerHTML = rows().map(([a, b]) => \`<li><span>\${a}</span><span>\${b}</span></li>\`).join("");
-  const url = \`https://wa.me/\${CONFIG.whatsapp}?text=\${encodeURIComponent(message())}\`;
+  $("#summary").innerHTML = rows().map(([a, b]) => `<li><span>${a}</span><span>${b}</span></li>`).join("");
+  const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(message())}`;
   $("#sendWA").href = url; $("#floatWA").href = url;
 }
 
@@ -113,7 +113,7 @@ let ticking = false;
 function onScroll() {
   const y = window.scrollY;
   nav.classList.toggle("solid", y > 40);
-  if (!reduce && y < window.innerHeight * 1.3) heroBg.style.transform = \`translate3d(0, \${y * 0.25}px, 0)\`;
+  if (!reduce && y < window.innerHeight * 1.3) heroBg.style.transform = `translate3d(0, ${y * 0.25}px, 0)`;
   ticking = false;
 }
 window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
