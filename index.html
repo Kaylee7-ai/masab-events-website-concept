@@ -1,354 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Masab Events — Where Every Celebration Becomes a Masterpiece</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="glow.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>MASAB EVENTS — Where every celebration becomes a masterpiece</title>
+<style>
+:root{--bg:#0c0a09;--bg-elevated:#161311;--bg-card:rgba(28,24,21,.72);--text:#f5f0e9;--text-muted:#cbbfb2;--accent:#c9a9a0;--accent-soft:#d8bdb5;--accent-glow:rgba(201,169,160,.55);--accent-strong:rgba(201,169,160,.85);--ivory:#f5f0e9;--border:rgba(201,169,160,.22)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--text);overflow-x:hidden;min-height:100vh;position:relative;-webkit-font-smoothing:antialiased}
+.atmosphere{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.7;will-change:transform}
+.orb-1{width:420px;height:420px;background:radial-gradient(circle,rgba(201,169,160,.55) 0%,transparent 68%);top:-140px;right:-100px;animation:float1 14s ease-in-out infinite}
+.orb-2{width:340px;height:340px;background:radial-gradient(circle,rgba(245,240,233,.18) 0%,transparent 70%);bottom:15%;left:-120px;animation:float2 19s ease-in-out infinite}
+.orb-3{width:260px;height:260px;background:radial-gradient(circle,rgba(201,169,160,.45) 0%,transparent 68%);top:38%;right:5%;animation:float3 11s ease-in-out infinite}
+.orb-4{width:300px;height:300px;background:radial-gradient(circle,rgba(201,169,160,.35) 0%,transparent 70%);bottom:-80px;right:15%;animation:float4 16s ease-in-out infinite}
+.orb-5{width:180px;height:180px;background:radial-gradient(circle,rgba(245,240,233,.22) 0%,transparent 65%);top:22%;left:12%;animation:float5 13s ease-in-out infinite}
+.orb-6{width:220px;height:220px;background:radial-gradient(circle,rgba(201,169,160,.4) 0%,transparent 70%);top:65%;left:40%;animation:float6 17s ease-in-out infinite}
+@keyframes float1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,50px) scale(1.15)}}@keyframes float2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(50px,-30px) scale(1.1)}}@keyframes float3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-30px,-45px) scale(1.2)}}@keyframes float4{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(35px,25px) scale(.9)}}@keyframes float5{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(25px,40px) scale(1.25)}}@keyframes float6{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-45px,20px) scale(1.15)}}
+body:before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:1;opacity:.5}
+header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:linear-gradient(to bottom,rgba(12,10,9,.95),transparent);backdrop-filter:blur(16px)}
+.logo-wrap{display:flex;align-items:center;gap:12px;perspective:1000px}.logo-3d{width:48px;height:48px;border-radius:50%;background:linear-gradient(145deg,#2e2824,#161311);border:1.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;letter-spacing:1px;color:var(--ivory);box-shadow:0 0 25px var(--accent-glow),0 0 50px rgba(201,169,160,.25),0 0 80px rgba(201,169,160,.1),inset 0 1px 0 rgba(255,255,255,.1);transform-style:preserve-3d;animation:logoFloat 5.5s ease-in-out infinite;position:relative}
+.logo-3d:before{content:'';position:absolute;inset:-10px;border-radius:50%;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 70%);opacity:.7;z-index:-1;animation:logoPulse 3.5s ease-in-out infinite}.logo-3d:after{content:'';position:absolute;inset:-18px;border-radius:50%;border:1px solid rgba(201,169,160,.25);opacity:.5;animation:logoRing 4s linear infinite}
+@keyframes logoFloat{0%,100%{transform:translateY(0) rotateY(0) rotateX(0) scale(1)}25%{transform:translateY(-10px) rotateY(12deg) rotateX(6deg) scale(1.05)}50%{transform:translateY(-6px) rotateY(-8deg) rotateX(-4deg) scale(1.02)}75%{transform:translateY(-12px) rotateY(6deg) rotateX(8deg) scale(1.06)}}@keyframes logoPulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:.95;transform:scale(1.25)}}@keyframes logoRing{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.4);opacity:0}}
+.brand-name{font-size:14px;letter-spacing:3.5px;text-transform:uppercase;color:var(--ivory);font-weight:500}.menu-btn{width:42px;height:42px;border-radius:12px;background:var(--bg-elevated);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text);font-size:18px;box-shadow:0 0 20px rgba(201,169,160,.08)}
+.hero{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:110px 26px 70px;text-align:center}
+.eyebrow{font-size:11px;letter-spacing:4.5px;text-transform:uppercase;color:var(--accent);margin-bottom:26px;opacity:.95;position:relative;display:inline-block;text-shadow:0 0 20px var(--accent-glow)}.eyebrow:before,.eyebrow:after{content:'';position:absolute;top:50%;width:32px;height:1px;background:linear-gradient(90deg,transparent,var(--accent))}.eyebrow:before{right:calc(100% + 16px)}.eyebrow:after{left:calc(100% + 16px);background:linear-gradient(90deg,var(--accent),transparent)}
+.hero h1{font-size:clamp(2.7rem,9.5vw,3.8rem);line-height:1.12;font-weight:400;color:var(--ivory);margin-bottom:22px;text-shadow:0 0 30px rgba(245,240,233,.2),0 0 60px rgba(201,169,160,.15),0 0 100px rgba(201,169,160,.08)}.hero h1 em{font-style:italic;color:var(--accent-soft);text-shadow:0 0 25px var(--accent-glow),0 0 50px rgba(201,169,160,.3)}
+.hero-sub{font-family:system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.65;color:var(--text-muted);max-width:340px;margin:0 auto 38px}.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:16px 28px;border-radius:100px;font-family:system-ui,-apple-system,sans-serif;font-size:14px;font-weight:500;text-decoration:none;transition:all .4s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(135deg,var(--accent-soft),var(--accent));color:#1a1513;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 10px 40px var(--accent-glow),0 0 70px rgba(201,169,160,.25)}.btn-primary:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 0 0 1px rgba(255,255,255,.18),0 16px 50px var(--accent-strong),0 0 90px rgba(201,169,160,.4)}
+.btn-secondary{background:rgba(28,24,21,.5);color:var(--ivory);border:1px solid var(--border);backdrop-filter:blur(10px)}.btn-secondary:hover{border-color:var(--accent);background:rgba(201,169,160,.1);box-shadow:0 0 35px rgba(201,169,160,.2);transform:translateY(-3px)}
+section{position:relative;z-index:2;padding:70px 22px}.section-label{font-size:11px;letter-spacing:3.5px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;text-shadow:0 0 18px var(--accent-glow)}.section-title{font-size:clamp(1.75rem,6vw,2.35rem);font-weight:400;line-height:1.25;margin-bottom:18px;color:var(--ivory)}.section-body{font-family:system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.7;color:var(--text-muted);max-width:400px}
+.touch{text-align:center;padding-top:30px}.big-number{font-size:6rem;font-weight:300;color:var(--accent);line-height:1;text-shadow:0 0 40px var(--accent-glow),0 0 80px rgba(201,169,160,.3),0 0 120px rgba(201,169,160,.15);margin-bottom:6px;letter-spacing:-3px;animation:numberGlow 4s ease-in-out infinite}
+@keyframes numberGlow{0%,100%{text-shadow:0 0 40px var(--accent-glow),0 0 80px rgba(201,169,160,.3)}50%{text-shadow:0 0 55px var(--accent-strong),0 0 100px rgba(201,169,160,.45)}}.big-number-sub{font-family:system-ui,-apple-system,sans-serif;font-size:14px;color:var(--text-muted);margin-bottom:44px}.services{padding-top:30px}.services-intro{text-align:center;margin-bottom:44px}
+.cards{display:flex;flex-direction:column;gap:16px;perspective:1400px}.card{background:var(--bg-card);border:1px solid var(--border);border-radius:22px;padding:24px 22px;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 12px 40px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.04),inset 0 1px 0 rgba(255,255,255,.05);transform-style:preserve-3d;transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s ease,border-color .5s ease;position:relative;overflow:hidden}
+.card:before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.6}.card:after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(201,169,160,.08),transparent 60%);pointer-events:none;opacity:0;transition:opacity .5s ease}
+.card:hover{transform:translateY(-10px) rotateX(7deg) rotateY(-3deg) scale(1.025);border-color:rgba(201,169,160,.45);box-shadow:0 25px 60px rgba(0,0,0,.55),0 0 50px rgba(201,169,160,.18),0 0 80px rgba(201,169,160,.08),inset 0 1px 0 rgba(255,255,255,.08)}.card:hover:after{opacity:1}
+.card-num{font-size:12px;letter-spacing:2.5px;color:var(--accent);margin-bottom:9px;font-family:system-ui,-apple-system,sans-serif;text-shadow:0 0 12px var(--accent-glow)}.card h3{font-size:1.22rem;font-weight:400;margin-bottom:7px;color:var(--ivory)}.card p{font-family:system-ui,-apple-system,sans-serif;font-size:13.5px;line-height:1.55;color:var(--text-muted)}
+.package{padding:30px 22px 60px}.package-panel{background:linear-gradient(165deg,#1a1613 0%,#0f0d0b 100%);border:1px solid rgba(201,169,160,.28);border-radius:28px;padding:34px 26px;position:relative;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.03),0 30px 70px rgba(0,0,0,.55),0 0 100px rgba(201,169,160,.12)}
+.package-panel:before{content:'';position:absolute;top:-40%;left:-25%;width:90%;height:90%;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 65%);opacity:.45;pointer-events:none;animation:panelGlow 8s ease-in-out infinite}.package-panel:after{content:'';position:absolute;bottom:-35%;right:-15%;width:70%;height:70%;background:radial-gradient(circle,rgba(245,240,233,.1) 0%,transparent 70%);pointer-events:none}
+@keyframes panelGlow{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.55;transform:scale(1.08)}}.package-label{font-size:11px;letter-spacing:3.5px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;position:relative;text-shadow:0 0 15px var(--accent-glow)}.package-title{font-size:1.65rem;line-height:1.3;margin-bottom:10px;position:relative}.package-sub{font-family:system-ui,-apple-system,sans-serif;font-size:14px;color:var(--text-muted);margin-bottom:26px;position:relative}
+.package-list{list-style:none;position:relative;margin-bottom:30px}.package-list li{font-family:system-ui,-apple-system,sans-serif;font-size:13.5px;color:var(--text-muted);padding:6px 0 6px 22px;position:relative}.package-list li:before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent-glow)}.btn-package{width:100%;justify-content:center;background:linear-gradient(135deg,var(--accent-soft),var(--accent));color:#1a1513;box-shadow:0 10px 40px var(--accent-glow)}
+.planner{padding:20px 22px 160px}.planner-header{text-align:center;margin-bottom:28px}.planner-card{background:var(--bg-card);border:1px solid var(--border);border-radius:26px;padding:28px 22px;backdrop-filter:blur(20px);box-shadow:0 25px 60px rgba(0,0,0,.45),0 0 60px rgba(201,169,160,.08);position:relative;overflow:hidden}.planner-card:before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.5}
+.form-section{margin-bottom:28px}.form-section h3{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;font-family:system-ui,-apple-system,sans-serif;font-weight:500}.chip-group{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:11px 18px;border-radius:100px;border:1px solid var(--border);background:rgba(22,19,17,.6);color:var(--text-muted);font-family:system-ui,-apple-system,sans-serif;font-size:13.5px;cursor:pointer;transition:all .3s ease;user-select:none}.chip:hover{border-color:rgba(201,169,160,.45);color:var(--ivory);background:rgba(201,169,160,.08)}.chip.active{background:linear-gradient(135deg,var(--accent-soft),var(--accent));color:#1a1513;border-color:transparent;box-shadow:0 0 25px var(--accent-glow);font-weight:500}
+.form-group{margin-bottom:18px}.form-group label{display:block;font-family:system-ui,-apple-system,sans-serif;font-size:13px;color:var(--text-muted);margin-bottom:7px}.form-group input,.form-group select,.form-group textarea{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--border);background:rgba(22,19,17,.7);color:var(--ivory);font-family:system-ui,-apple-system,sans-serif;font-size:14.5px;outline:none;transition:border-color .3s ease,box-shadow .3s ease}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(201,169,160,.15),0 0 25px rgba(201,169,160,.1)}.form-group textarea{min-height:90px;resize:vertical}.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23c9a9a0' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+.summary-box{background:rgba(22,19,17,.8);border:1px solid var(--border);border-radius:18px;padding:20px;margin:28px 0 24px}.summary-box h4{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;font-family:system-ui,-apple-system,sans-serif}.summary-row{font-family:system-ui,-apple-system,sans-serif;font-size:13.5px;color:var(--text-muted);margin-bottom:6px;display:flex;gap:6px}.summary-row strong{color:var(--ivory);font-weight:500;min-width:70px}
+.btn-wa{width:100%;justify-content:center;background:#25D366;color:white;box-shadow:0 0 30px rgba(37,211,102,.35);margin-bottom:12px;font-weight:600}.btn-wa:hover{transform:translateY(-3px);box-shadow:0 0 45px rgba(37,211,102,.5)}.btn-copy{width:100%;justify-content:center;background:transparent;color:var(--ivory);border:1px solid var(--border)}
+.fab-stack{position:fixed;bottom:26px;right:18px;z-index:90;display:flex;flex-direction:column;gap:12px;align-items:center}.fab{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease}.fab-wa{background:#25D366;color:white;box-shadow:0 0 0 0 rgba(37,211,102,.5),0 10px 30px rgba(0,0,0,.45);animation:fabPulse 2.4s infinite}.fab-call{background:var(--accent);color:#1a1513;box-shadow:0 0 30px var(--accent-glow)}.fab:hover{transform:scale(1.12)}
+@keyframes fabPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5),0 10px 30px rgba(0,0,0,.45)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0),0 10px 30px rgba(0,0,0,.45)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 10px 30px rgba(0,0,0,.45)}}
+@media(min-width:480px){.cards,.package-panel,.planner-card{max-width:440px;margin-left:auto;margin-right:auto}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
 </head>
 <body>
+<div class="atmosphere"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div><div class="orb orb-4"></div><div class="orb orb-5"></div><div class="orb orb-6"></div></div>
+<header><div class="logo-wrap"><div class="logo-3d">ME</div><div class="brand-name">MASAB EVENTS</div></div><div class="menu-btn" aria-hidden="true">☰</div></header>
+<section class="hero"><div class="eyebrow">Wedding & Event Design</div><h1>Where every<br>celebration<br>becomes <em>a masterpiece</em></h1><p class="hero-sub">From the engagement to the last dance, we plan, style and perfect every detail of your day.</p><div class="hero-ctas"><a href="#planner" class="btn btn-primary">Plan My Event →</a><a href="#services" class="btn btn-secondary">Our Services</a></div></section>
+<section class="touch"><div class="big-number">16</div><div class="big-number-sub">Services. One team.<br>One beautiful day.</div><div class="section-label">The Masab Touch</div><h2 class="section-title" style="max-width:340px;margin-left:auto;margin-right:auto">Planning, décor, bridal styling, catering, music and memories — all under one roof</h2><p class="section-body" style="margin:0 auto 30px">So nothing is left to chance and everything feels effortless.</p><a href="#services" class="btn btn-secondary" style="display:inline-flex">Explore Services ↓</a></section>
+<section class="services" id="services"><div class="services-intro"><div class="section-label">What We Do</div><h2 class="section-title">Everything your day needs</h2><p class="section-body" style="margin:0 auto">Choose the full wedding package or just the services you need. Every detail is handled with care.</p></div>
+<div class="cards">
+<div class="card"><div class="card-num">01</div><h3>Planning & Coordination</h3><p>Your day organised from the first idea to the last guest.</p></div>
+<div class="card"><div class="card-num">02</div><h3>Décor</h3><p>Engagement, church and reception styling.</p></div>
+<div class="card"><div class="card-num">03</div><h3>Wedding Gown</h3><p>The gown for your big day.</p></div>
+<div class="card"><div class="card-num">04</div><h3>Hair & Makeup</h3><p>Bridal beauty that lasts all day.</p></div>
+<div class="card"><div class="card-num">05</div><h3>Bridal Accessories</h3><p>The finishing touches for the bride.</p></div>
+<div class="card"><div class="card-num">06</div><h3>Catering</h3><p>Buffet or packed meals for your guests.</p></div>
+<div class="card"><div class="card-num">07</div><h3>Beverages</h3><p>Cocktail, local bar, canned and bottled drinks, wine and champagne.</p></div>
+<div class="card"><div class="card-num">08</div><h3>Cake</h3><p>A cake made for your celebration.</p></div>
+<div class="card"><div class="card-num">09</div><h3>Dowry Wrapping, Bearing & Ushering</h3><p>Beautifully wrapped, carried and presented.</p></div>
+<div class="card"><div class="card-num">10</div><h3>Bridal Shower</h3><p>Including bridal room styling.</p></div>
+<div class="card"><div class="card-num">11</div><h3>Photography & Videography</h3><p>Memories captured as they happen.</p></div>
+<div class="card"><div class="card-num">12</div><h3>Invitations & Stationery</h3><p>Beautiful paper goods for your day.</p></div>
+<div class="card"><div class="card-num">13</div><h3>Souvenirs</h3><p>Thoughtful gifts for your guests.</p></div>
+<div class="card"><div class="card-num">14</div><h3>MC & DJ</h3><p>Music and hosting that keep the energy high.</p></div>
+<div class="card"><div class="card-num">15</div><h3>Pre-wedding & Save-the-date Photos</h3><p>Photo shoots before the big day.</p></div>
+<div class="card"><div class="card-num">16</div><h3>Other Wedding Needs</h3><p>Tell us what you need and we’ll take care of it.</p></div>
+</div></section>
+<section class="package"><div class="package-panel"><div class="package-label">The Signature Package</div><h2 class="package-title">Your wedding: from first idea to last dance</h2><p class="package-sub">Everything handled by one team. Take the full package or build your own.</p><ul class="package-list"><li>Planning & coordination</li><li>Décor: engagement, church & reception</li><li>Wedding gown</li><li>Hair & makeup</li><li>Bridal accessories</li><li>Catering: buffet or packed</li><li>Beverages & mobile bar</li><li>Cake</li><li>Dowry wrapping, bearing & ushering</li><li>Bridal shower & room styling</li><li>Photography & videography</li><li>Invitations & stationery</li><li>Souvenirs</li><li>MC & DJ</li><li>Pre-wedding & save-the-date photos</li><li>All other wedding needs</li></ul><a href="#planner" class="btn btn-package">Build My Package →</a></div></section>
+<section class="planner" id="planner"><div class="planner-header"><div class="section-label">Event Planner</div><h2 class="section-title">Tell us about your event</h2><p class="section-body" style="margin:0 auto">Pick your event and the services you’d like. Your details arrive on WhatsApp, ready for us to reply.</p></div>
+<div class="planner-card">
+<div class="form-section"><h3>Type of event</h3><div class="chip-group" id="eventTypes"><div class="chip" data-value="Wedding">Wedding</div><div class="chip" data-value="Engagement">Engagement</div><div class="chip" data-value="Traditional / dowry">Traditional / dowry</div><div class="chip" data-value="Bridal shower">Bridal shower</div><div class="chip" data-value="Pre-wedding shoot">Pre-wedding shoot</div><div class="chip" data-value="Other event">Other event</div></div></div>
+<div class="form-section"><h3>Services you need (pick any)</h3><div class="chip-group" id="servicesChips">
+<div class="chip" data-value="Planning & Coordination">Planning & Coordination</div><div class="chip" data-value="Décor">Décor</div><div class="chip" data-value="Wedding Gown">Wedding Gown</div><div class="chip" data-value="Hair & Makeup">Hair & Makeup</div><div class="chip" data-value="Bridal Accessories">Bridal Accessories</div><div class="chip" data-value="Catering">Catering</div><div class="chip" data-value="Beverages">Beverages</div><div class="chip" data-value="Cake">Cake</div><div class="chip" data-value="Dowry Wrapping, Bearing & Ushering">Dowry Wrapping, Bearing & Ushering</div><div class="chip" data-value="Bridal Shower">Bridal Shower</div><div class="chip" data-value="Photography & Videography">Photography & Videography</div><div class="chip" data-value="Invitations & Stationery">Invitations & Stationery</div><div class="chip" data-value="Souvenirs">Souvenirs</div><div class="chip" data-value="MC & DJ">MC & DJ</div><div class="chip" data-value="Pre-wedding & Save-the-date Photos">Pre-wedding & Save-the-date Photos</div><div class="chip" data-value="Other Wedding Needs">Other Wedding Needs</div>
+</div></div>
+<div class="form-section"><h3>Your details</h3>
+<div class="form-group"><label for="fullName">Your full name</label><input type="text" id="fullName" placeholder="Your full name"></div>
+<div class="form-group"><label for="eventDate">Event date</label><input type="text" id="eventDate" placeholder="To be confirmed"></div>
+<div class="form-group"><label for="guests">Expected guests</label><select id="guests"><option value="Not sure yet">Not sure yet</option><option value="Under 50">Under 50</option><option value="50–100">50–100</option><option value="100–200">100–200</option><option value="200–300">200–300</option><option value="300+">300+</option></select></div>
+<div class="form-group"><label for="venue">Venue or area</label><input type="text" id="venue" placeholder="Venue, or ‘not decided’"></div>
+<div class="form-group"><label for="notes">Anything else? Colours, theme, ideas</label><textarea id="notes" placeholder="Tell us what you’re imagining..."></textarea></div>
+</div>
+<div class="summary-box"><h4>Summary</h4><div class="summary-row"><strong>Event:</strong><span id="sumEvent">—</span></div><div class="summary-row"><strong>Services:</strong><span id="sumServices">—</span></div><div class="summary-row"><strong>Name:</strong><span id="sumName">—</span></div><div class="summary-row"><strong>Date:</strong><span id="sumDate">—</span></div><div class="summary-row"><strong>Guests:</strong><span id="sumGuests">—</span></div><div class="summary-row"><strong>Venue:</strong><span id="sumVenue">—</span></div></div>
+<button class="btn btn-wa" id="sendWhatsApp" type="button">Send on WhatsApp →</button><button class="btn btn-copy" id="copyDetails" type="button">Copy My Event Details</button>
+</div></section>
+<div class="fab-stack"><a href="https://wa.me/233534332751" class="fab fab-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with Masab Events on WhatsApp">WA</a><a href="tel:+233534332751" class="fab fab-call" aria-label="Call Masab Events">Call</a></div>
+<script>
+const WHATSAPP_NUMBER = '233534332751';
+const eventTypes = document.getElementById('eventTypes');
+const servicesChips = document.getElementById('servicesChips');
 
-  <!-- NAV -->
-  <nav id="nav">
-    <div class="container nav-inner">
-      <a href="#" class="logo">
-        <div class="logo-mark">ME</div>
-        <span class="logo-text">MASAB EVENTS</span>
-      </a>
-      <div class="nav-links" id="navLinks">
-        <a href="#services">Services</a>
-        <a href="#package">Package</a>
-        <a href="#planner">Plan Event</a>
-        <a href="#contact">Contact</a>
-        <a href="#planner" class="btn btn-gold nav-cta">Plan My Event</a>
-      </div>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-    </div>
-  </nav>
+eventTypes.querySelectorAll('.chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    eventTypes.querySelectorAll('.chip').forEach(item => item.classList.remove('active'));
+    chip.classList.add('active');
+    updateSummary();
+  });
+});
+servicesChips.querySelectorAll('.chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    chip.classList.toggle('active');
+    updateSummary();
+  });
+});
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-deco"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="eyebrow">Wedding & Event Design</div>
-        <h1>Where every celebration becomes <em>a masterpiece</em></h1>
-        <p>From the engagement to the last dance, we plan, style and perfect every detail of your day.</p>
-        <div class="hero-ctas">
-          <a href="#planner" class="btn btn-gold glow-btn">Plan My Event →</a>
-          <a href="#services" class="btn btn-outline">Our Services</a>
-        </div>
-      </div>
-    </div>
-  </section>
+function updateSummary() {
+  const activeEvent = eventTypes.querySelector('.chip.active');
+  const activeServices = [...servicesChips.querySelectorAll('.chip.active')].map(chip => chip.dataset.value);
+  document.getElementById('sumEvent').textContent = activeEvent ? activeEvent.dataset.value : '—';
+  document.getElementById('sumServices').textContent = activeServices.length ? activeServices.join(', ') : '—';
+  document.getElementById('sumName').textContent = document.getElementById('fullName').value || '—';
+  document.getElementById('sumDate').textContent = document.getElementById('eventDate').value || '—';
+  document.getElementById('sumGuests').textContent = document.getElementById('guests').value || '—';
+  document.getElementById('sumVenue').textContent = document.getElementById('venue').value || '—';
+}
+['fullName','eventDate','guests','venue'].forEach(id => {
+  document.getElementById(id).addEventListener('input', updateSummary);
+  document.getElementById(id).addEventListener('change', updateSummary);
+});
 
-  <!-- THE MASAB TOUCH -->
-  <section class="touch">
-    <div class="container">
-      <div class="touch-grid">
-        <div>
-          <div class="touch-number">16</div>
-          <p class="touch-subtitle">Services. One team.<br>One beautiful day.</p>
-        </div>
-        <div class="touch-text">
-          <div class="section-label">The Masab Touch</div>
-          <h2>Planning, décor, bridal styling, catering, music and memories, all under one roof, so nothing is left to chance and everything feels effortless.</h2>
-          <a href="#services" class="btn btn-dark">Explore Services ↓</a>
-        </div>
-      </div>
-    </div>
-  </section>
+function buildMessage() {
+  const value = id => document.getElementById(id).value.trim();
+  const event = document.getElementById('sumEvent').textContent;
+  const services = document.getElementById('sumServices').textContent;
+  return [
+    '*MASAB EVENTS – New Enquiry*',
+    '',
+    '*Event:* ' + event,
+    '*Services:* ' + services,
+    '*Name:* ' + (value('fullName') || '—'),
+    '*Date:* ' + (value('eventDate') || 'To be confirmed'),
+    '*Guests:* ' + value('guests'),
+    '*Venue:* ' + (value('venue') || 'Not decided'),
+    '*Notes:* ' + (value('notes') || '—')
+  ].join('\n');
+}
 
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="container">
-      <div class="section-label">What We Do</div>
-      <h2 class="section-title">Everything your day needs</h2>
-      <p class="section-desc">Choose the full wedding package or just the services you need. Every detail is handled with care.</p>
+document.getElementById('sendWhatsApp').addEventListener('click', () => {
+  updateSummary();
+  const message = buildMessage();
+  const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
+  window.open(url, '_blank', 'noopener,noreferrer');
+});
 
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-num">01</div>
-          <h3>Planning & Coordination</h3>
-          <p>Your day organised from the first idea to the last guest.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">02</div>
-          <h3>Décor</h3>
-          <p>Engagement, church and reception styling.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">03</div>
-          <h3>Wedding Gown</h3>
-          <p>The gown for your big day.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">04</div>
-          <h3>Hair & Makeup</h3>
-          <p>Bridal beauty that lasts all day.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">05</div>
-          <h3>Bridal Accessories</h3>
-          <p>The finishing touches for the bride.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">06</div>
-          <h3>Catering</h3>
-          <p>Buffet or packed meals for your guests.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">07</div>
-          <h3>Beverages</h3>
-          <p>Cocktail, local bar, canned and bottled drinks, wine and champagne.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">08</div>
-          <h3>Cake</h3>
-          <p>A cake made for your celebration.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">09</div>
-          <h3>Dowry Wrapping, Bearing & Ushering</h3>
-          <p>Beautifully wrapped, carried and presented.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">10</div>
-          <h3>Bridal Shower</h3>
-          <p>Including bridal room styling.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">11</div>
-          <h3>Photography & Videography</h3>
-          <p>Memories captured as they happen.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">12</div>
-          <h3>Invitations & Stationery</h3>
-          <p>Beautiful paper goods for your day.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">13</div>
-          <h3>Souvenirs</h3>
-          <p>Thoughtful gifts for your guests.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">14</div>
-          <h3>MC & DJ</h3>
-          <p>Music and hosting that keep the energy high.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">15</div>
-          <h3>Pre-wedding & Save-the-date Photos</h3>
-          <p>Photo shoots before the big day.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-num">16</div>
-          <h3>Other Wedding Needs</h3>
-          <p>Tell us what you need and we’ll take care of it.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+document.getElementById('copyDetails').addEventListener('click', async () => {
+  const button = document.getElementById('copyDetails');
+  try {
+    await navigator.clipboard.writeText(buildMessage().replace(/\*/g, ''));
+    button.textContent = 'Copied!';
+    setTimeout(() => button.textContent = 'Copy My Event Details', 2000);
+  } catch (error) {
+    button.textContent = 'Copy unavailable — select the summary above';
+    setTimeout(() => button.textContent = 'Copy My Event Details', 3000);
+  }
+});
 
-  <!-- SIGNATURE PACKAGE -->
-  <section id="package" class="package-section">
-    <div class="package">
-      <div class="package-inner">
-        <div class="section-label package-label">The Signature Package</div>
-        <h2>Your wedding: from first idea to last dance</h2>
-        <p class="package-desc">Everything handled by one team. Take the full package or build your own.</p>
-        <ul class="package-list">
-          <li>Planning & coordination</li>
-          <li>Décor: engagement, church & reception</li>
-          <li>Wedding gown</li>
-          <li>Hair & makeup</li>
-          <li>Bridal accessories</li>
-          <li>Catering: buffet or packed</li>
-          <li>Beverages & mobile bar</li>
-          <li>Cake</li>
-          <li>Dowry wrapping, bearing & ushering</li>
-          <li>Bridal shower & room styling</li>
-          <li>Photography & videography</li>
-          <li>Invitations & stationery</li>
-          <li>Souvenirs</li>
-          <li>MC & DJ</li>
-          <li>Pre-wedding & save-the-date photos</li>
-          <li>All other wedding needs</li>
-        </ul>
-        <a href="#planner" class="btn btn-gold glow-btn">Build My Package →</a>
-      </div>
-    </div>
-  </section>
+let pointerX = 0, pointerY = 0;
+document.addEventListener('pointermove', event => {
+  pointerX = (event.clientX / window.innerWidth - .5) * 18;
+  pointerY = (event.clientY / window.innerHeight - .5) * 18;
+  document.querySelectorAll('.orb').forEach((orb, index) => {
+    const factor = (index + 1) * .12;
+    orb.style.marginLeft = (pointerX * factor) + 'px';
+    orb.style.marginTop = (pointerY * factor) + 'px';
+  });
+}, {passive:true});
 
-  <!-- EVENT PLANNER -->
-  <section id="planner" class="planner">
-    <div class="container">
-      <div class="section-label center">Event Planner</div>
-      <h2 class="section-title center">Tell us about your event</h2>
-      <p class="section-desc center">Pick your event and the services you’d like. Your details arrive on WhatsApp, ready for us to reply.</p>
-
-      <div class="planner-card">
-        <div class="planner-header">
-          <h2>Your event</h2>
-          <p>No payment is taken here. Masab Events confirms availability and pricing with you.</p>
-        </div>
-        <div class="planner-body">
-
-          <div class="form-section">
-            <h3>Type of event</h3>
-            <div class="chips" id="eventTypes">
-              <button class="chip active" data-value="Wedding">Wedding</button>
-              <button class="chip" data-value="Engagement">Engagement</button>
-              <button class="chip" data-value="Traditional / dowry">Traditional / dowry</button>
-              <button class="chip" data-value="Bridal shower">Bridal shower</button>
-              <button class="chip" data-value="Pre-wedding shoot">Pre-wedding shoot</button>
-              <button class="chip" data-value="Other event">Other event</button>
-            </div>
-          </div>
-
-          <div class="form-section">
-            <h3>Services you need <span class="hint">(pick any)</span></h3>
-            <div class="chips" id="serviceChips">
-              <button class="chip" data-value="Planning & Coordination">Planning & Coordination</button>
-              <button class="chip" data-value="Décor">Décor</button>
-              <button class="chip" data-value="Wedding Gown">Wedding Gown</button>
-              <button class="chip" data-value="Hair & Makeup">Hair & Makeup</button>
-              <button class="chip" data-value="Bridal Accessories">Bridal Accessories</button>
-              <button class="chip" data-value="Catering">Catering</button>
-              <button class="chip" data-value="Beverages">Beverages</button>
-              <button class="chip" data-value="Cake">Cake</button>
-              <button class="chip" data-value="Dowry Wrapping, Bearing & Ushering">Dowry Wrapping, Bearing & Ushering</button>
-              <button class="chip" data-value="Bridal Shower">Bridal Shower</button>
-              <button class="chip" data-value="Photography & Videography">Photography & Videography</button>
-              <button class="chip" data-value="Invitations & Stationery">Invitations & Stationery</button>
-              <button class="chip" data-value="Souvenirs">Souvenirs</button>
-              <button class="chip" data-value="MC & DJ">MC & DJ</button>
-              <button class="chip" data-value="Pre-wedding & Save-the-date Photos">Pre-wedding & Save-the-date Photos</button>
-              <button class="chip" data-value="Other Wedding Needs">Other Wedding Needs</button>
-            </div>
-          </div>
-
-          <div class="form-section">
-            <h3>Your details</h3>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Your full name</label>
-                <input type="text" id="fullName" placeholder="Your full name" />
-              </div>
-              <div class="form-group">
-                <label>Event date</label>
-                <input type="text" id="eventDate" placeholder="To be confirmed" />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Expected guests</label>
-                <select id="guests">
-                  <option>Not sure yet</option>
-                  <option>Under 50</option>
-                  <option>50 – 100</option>
-                  <option>100 – 200</option>
-                  <option>200 – 300</option>
-                  <option>300+</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Venue or area</label>
-                <input type="text" id="venue" placeholder="Venue, or ‘not decided’" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Anything else? Colours, theme, ideas</label>
-              <textarea id="notes" placeholder="Tell us what you’re imagining..."></textarea>
-            </div>
-          </div>
-
-          <div class="summary-box" id="summaryBox">
-            <h4>Summary</h4>
-            <p><strong>Event:</strong> <span id="sumEvent">Wedding</span></p>
-            <p><strong>Services:</strong> <span id="sumServices">None selected yet</span></p>
-            <p><strong>Name:</strong> <span id="sumName">—</span></p>
-            <p><strong>Date:</strong> <span id="sumDate">To be confirmed</span></p>
-            <p><strong>Guests:</strong> <span id="sumGuests">Not sure yet</span></p>
-            <p><strong>Venue:</strong> <span id="sumVenue">Not decided</span></p>
-          </div>
-
-          <div class="planner-actions">
-            <button class="btn btn-whatsapp glow-btn" id="sendWhatsApp">
-              Send on WhatsApp →
-            </button>
-            <button class="btn btn-outline" id="copyDetails">
-              Copy My Event Details
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-label">Contact</div>
-      <h2 class="section-title">Visit, call or message us</h2>
-
-      <div class="contact-grid">
-        <div>
-          <div class="contact-item">
-            <h4>Locate us</h4>
-            <p>#6 Flamboyant Link, Motorway Residential Area</p>
-            <a href="https://maps.google.com/?q=Motorway+Residential+Area+Tema+Ghana" target="_blank" class="link-gold">Get directions →</a>
-          </div>
-          <div class="contact-item">
-            <h4>Call us</h4>
-            <div class="phone-list">
-              <a href="tel:+233262744322">026 274 4322</a>
-              <a href="tel:+233244744322">024 474 4322</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <h4>Follow us</h4>
-            <p>Facebook: Masab Events & Mobile Bar</p>
-            <p class="handle">masabevents_bar</p>
-          </div>
-        </div>
-        <div>
-          <div class="contact-item">
-            <h4>WhatsApp</h4>
-            <p>Prefer messaging? Reach us instantly.</p>
-            <a href="https://wa.me/233262744322" class="btn btn-whatsapp glow-btn" target="_blank" style="margin-top: 16px;">
-              Chat on WhatsApp →
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="logo-mark footer-logo">ME</div>
-      <p class="footer-brand">Masab Events</p>
-      <p>Where every celebration becomes a masterpiece.</p>
-      <p class="copyright">© 2025 Masab Events. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- FLOATING BUTTONS -->
-  <div class="float-btns">
-    <a href="https://wa.me/233262744322" class="float-btn float-wa" target="_blank" title="WhatsApp">WA</a>
-    <a href="tel:+233262744322" class="float-btn float-call" title="Call">Call</a>
-  </div>
-
-  <script src="script.js"></script>
-  <script src="glow.js"></script>
+const cards = document.querySelectorAll('.card');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0) rotateX(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold:.12});
+  cards.forEach((card,index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(35px) rotateX(5deg)';
+    card.style.transition = 'opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1)';
+    card.style.transitionDelay = (index * 45) + 'ms';
+    observer.observe(card);
+  });
+}
+updateSummary();
+</script>
 </body>
 </html>
